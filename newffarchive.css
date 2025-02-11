@@ -1,0 +1,1588 @@
+/* STYLESHEET for FANFARE Composer Section Reviews */
+/* Pete Stokely -- 2005_06_23 */
+/* rev for new templates -- 2005_08_09 */
+/* rev for new indexMap-based page generation -- 2005_11_11 */
+/* rev for CCS page design -- 2005_11_21 */
+/* rev for Google Site Search -- 2006_01_27 */
+/* rev for Home Page leftbar Login cluster -- 2006_03_03 */
+/* styled leftbar cover art displays -- 2006_04_23 */
+/* AMAZON Buy Divs -- 2006_06_23 */
+/* 2008_07_13 make composer bigger so I can see it's there */
+/* 2012_04_12 -- the ssi advertiser _leftbar */
+
+/* ==== COMMON PAGE STRUCTURE ==== */
+
+html, body {
+  margin: 0;
+}
+
+img, a {
+  border: 0;		/* image borders always 0 */
+  margin: 0;
+  padding: 0;
+  color: #066;
+/*  font-size: 16pt; */
+  font-family: "Times New Roman", Times, serif;
+}
+
+a:hover {
+  background-color: #fff;
+  text-decoration: none;
+}
+
+div#masthead a:hover {
+  background-color: #c00;
+}
+
+table#alphaTable a:hover {
+  background-color: #fc6;
+}
+
+table#latest-prev-issue td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16pt;
+}
+  
+td {
+  padding: 0;		/* cellpadding always 0 */
+}
+
+body {
+}
+
+div#container {width: 100%;}	/* go to fluid design */
+
+table {
+  width: 100%;
+}
+
+/* The MastHead */
+
+div#masthead {
+  background-color: #006680;
+  border: 2px solid #900;
+}
+
+table#mastheadTable {
+  width: 99%;
+  margin-top: 4px;
+  margin-bottom: 0px;
+}
+td#leftMasthead {
+  /*2005_11_25 -- get rid of 2px wrong offsetwidth: 275px; */
+  /* damn! this worked, and I cannot tell why! */
+  width: 272px;
+  vertical-align: top;
+}
+
+td#leftMasthead h3.ffhome {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 0px;
+}
+
+td#leftMasthead h3.home {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 16pt;
+}
+
+td#rightMasthead {
+  padding: 0;
+  margin: 0;
+}
+
+/* The Main Body for Composer-like indices */
+
+table#mainContent {
+  width: 100%;
+  padding: 0;
+  margin: 0px;
+}
+
+/* The Left Navbar */
+
+td#leftNav {
+  width:275px;
+  vertical-align: top;
+  background-color: #37abc8;
+}
+/* left bar cover art */
+td#leftNav div.leftCoverArt {
+  margin: 0;
+  padding: 0;
+}
+/* 2006_05_07 -- constrain width, but not height -- height is variable */
+td#leftNav div.leftCoverArt img {
+  width: 214px;
+  margin: 1px auto 0 31px;
+}
+
+td#leftNav table#browserTable {
+  width: 98%;
+  border: 0;
+  margin-left: 2px;
+  background-color: #fff;
+}
+
+/*2006_03_03 -- the login cluster box */
+td#leftNav div.member-area {
+  border: 0;
+  background-color: #e6e6e6;
+  border-right: 2px solid #900;
+  border-left: 2px solid #900;
+  border-bottom: 3px solid #900;
+}
+.member-area h2 {
+  color: #900;
+  text-align: center;
+}
+.member-area h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #900;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-cluster a {
+  margin: 10px auto;
+  color: #066;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14pt;
+}
+.login-cluster a:hover {
+  background-color: #fff;
+  text-decoration: none;
+}
+
+/*2012_04_12 -- the ssi advertiser ssi_leftbar */
+.ssi_leftbar {
+/*ccs trying to alter the width 8/20/15 */
+  width: 275px;
+  border-right: 2px solid #900;
+  border-left: 2px solid #900;
+  border-top: 2px solid #900;
+  border-left: 2px solid #900;
+  padding-bottom: 2px;
+  background-color: #e6e6e6;
+  text-align: center;
+}
+.ssi_leftbar h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #900;
+  text-align: center;
+  font-size: 14pt;
+}
+.ssi_leftbar h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #900;
+  text-align: center;
+  font-size: 12pt;
+}
+.ssi_leftbar a {
+  line-height: 1.5;
+  color: #066;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 12pt;
+}
+.ssi_leftbar a:hover {
+  background-color: #fff;
+  text-decoration: none;
+}
+
+/*2015_08_20 -- the ssi advertiser ssi_leftbar2 */
+.ssi_leftbar2 {
+  width: 275px;
+  border-right: 2px solid #900;
+  border-left: 2px solid #900;
+  border-bottom: 2px solid #900;
+  padding-top: 2px;
+  padding-bottom: 0px;
+  background-color: #e6e6e6;
+  text-align: center;
+}
+.ssi_leftbar2 h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #900;
+  text-align: center;
+  font-size: 14pt;
+}
+.ssi_leftbar2 h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #900;
+  text-align: center;
+  font-size: 12pt;
+}
+.ssi_leftbar2 a {
+  line-height: 1.5;
+  color: #066;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 12pt;
+}
+.ssi_leftbar2 a:hover {
+  background-color: #fff;
+  text-decoration: none;
+}
+
+/*2015_08_20 -- the ssi advertiser ssi_bottombar */
+.ssi_bottombar {
+  border-right: 0px;
+  border-left: 0px;
+  border-top: 0px;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  background-color: #fff;
+  text-align: center;
+}
+.ssi_bottombar h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #900;
+  text-align: center;
+  font-size: 14pt;
+}
+.ssi_bottombar h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #900;
+  text-align: center;
+  font-size: 12pt;
+}
+.ssi_bottombar a {
+  line-height: 1.5;
+  color: #066;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 12pt;
+}
+.ssi_bottombar a:hover {
+  background-color: #ff6;
+  text-decoration: none;
+}
+
+
+/*2015_08_20 -- the ssi advertiser ssi_rightbar_slim */
+.ssi_rightbar_slim {
+/*ccs trying to alter the width 8/20/15 */
+  width: 125px;
+  border-right: 2px solid #900;
+  border-left: 3px solid #900;
+/*  border-top: 10px solid #ff9; */
+/*  border-top: 0px;  */
+  padding-top: 5px; 
+  margin: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  background-color: #e6e6e6;
+  text-align: center;
+}
+.ssi_rightbar_slim h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #900;
+  text-align: center;
+  font-size: 14pt;
+}
+.ssi_rightbar_slim h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #900;
+  text-align: center;
+  font-size: 12pt;
+}
+.ssi_rightbar_slim a {
+  line-height: 1.5;
+  color: #066;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 12pt;
+}
+.ssi_rightbar_slim a:hover {
+  background-color: #ff6;
+  text-decoration: none;
+}
+
+/*2015_08_20 -- the ssi advertiser ssi_rightbar_fat */
+.ssi_rightbar_fat {
+/*ccs trying to alter the width 8/20/15 */
+  width: 275px;
+  border-right: 2px solid #900;
+  border-left: 3px solid #900;
+/*  border-top: 10px solid #ff9; */
+/*  border-top: 0px;  */
+  padding-top: 5px; 
+  margin: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  background-color: #e6e6e6;
+  text-align: center;
+}
+.ssi_rightbar_fat h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #900;
+  text-align: center;
+  font-size: 14pt;
+}
+.ssi_rightbar_fat h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #900;
+  text-align: center;
+  font-size: 12pt;
+}
+.ssi_rightbar_fat a {
+  line-height: 1.5;
+  color: #066;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 12pt;
+}
+.ssi_rightbar_fat a:hover {
+  background-color: #ff6;
+  text-decoration: none;
+}
+
+
+
+
+
+
+/* The Archive Index */
+
+h2#leftNavHeader {
+  color: #900;
+  text-align: center;
+  font-size: 14pt;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+td#masthead-bottom-left {
+  text-align: center;
+}
+
+
+td#masthead-bottom-left, td#masthead-bottom-right {
+  vertical-align: top;
+}
+td#masthead-bottom-left h2,
+td#masthead-bottom-left h2 a,
+td#masthead-bottom-right h2 {
+  padding: 0;
+  margin: 0;
+}
+
+td#masthead-bottom-right h2 a {
+  margin: 0 2px 0 0;
+  padding: 0;
+}
+
+td#rightMasthead h2 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+td#rightMasthead h2 a {
+  margin: 0;
+  margin-right: 2px;
+  padding: 0;
+}
+
+p.masterIndexEntry {
+  color: #c00;
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p.masterIndexEntry a {
+  display: block;
+  color: #c00;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  padding: 0;
+}
+
+p.masterIndexEntry a.current {
+  color: #ff0;
+  background-color: #900;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+p.masterIndexEntry a:hover {
+  background-color: #c00;
+  color: yellow;
+}
+
+p.currentMasterIndexEntry {
+  color: red;
+  padding: 1em;
+  text-align: center;
+  font-size: 14pt;
+  margin-top: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Content Areas */
+
+td#body {
+  vertical-align: top;
+  background-color: #37abc8;
+}
+td#body table, div#bodyDiv {
+  background-color: #fff;
+}
+/* These are used in the Indices */
+/* this h2 is the Most Reviewed Foo */
+div.body h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #900;
+  text-align: center;
+  background-color: #ff9;	
+  margin: 0;
+  padding: 3px;
+  border-bottom: 1px solid #900;
+}
+div.body h3 {
+  text-align: center;
+  background-color: #eee;
+  margin: 0;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #900;
+}
+div.body h4 {
+  text-align: center;
+  background-color: #eee;
+  margin: 0;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #900;
+}
+/* these are the hrefs in the index tables */
+div.body a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #900;
+  text-decoration: none;
+  font-size: 14px;
+}
+div.body a:visited {
+  color: purple;
+  text-decoration: none;
+}
+div.body a:hover {
+  /* background-color: #900; */
+  /* color: yellow; */
+  text-decoration: none;
+}
+
+/* these grip the single-column Label listings */
+
+tr.entry td.entryTitle h3 {
+  text-align: left;
+  margin: 0;
+  padding: 2px 1em;
+  border: 0;
+  background-color: #fff;
+  font-weight: normal;
+}
+
+/* The multi-column tds */
+tr.cols2 td {
+  width: 50%;
+  vertical-align: top;
+  border-bottom: 1px solid #900;
+  /*border-left: 1px solid #900;*/
+}
+tr.cols2 td p {
+  margin: 0;
+  padding: 2px 1em;
+}
+tr.cols3 td {
+  width: 33%;
+  vertical-align: top;
+  border-bottom: 1px solid #900;
+  /*border-left: 1px solid #900;*/
+}
+tr.cols3 td p {
+  margin: 0;
+  padding: 2px 1em;
+}
+tr.cols4 td {
+  width: 25%;
+  vertical-align: top;
+  border-bottom: 1px solid #900;
+  /*border-left: 1px solid #900;*/
+}
+tr.cols4 td p {
+  margin: 0;
+  padding: 2px 1em;
+}
+tr.cols5 td {
+  width: 20%;
+  vertical-align: top;
+  border-bottom: 1px solid #900;
+  /*border-left: 1px solid #900;*/
+}
+tr.cols5 td p {
+  margin: 0;
+  padding: 2px 1em;
+}
+tr.cols6 td {
+  width: 16%;
+  vertical-align: top;
+  border-bottom: 1px solid #900;
+  /*border-left: 1px solid #900;*/
+}
+tr.cols6 td p {
+  margin: 0;
+  padding: 2px 1em;
+}
+
+/* Custom Issues Index with Cover Art */
+div#issues_H {
+}
+div#issues_H table {
+  background-color: #900;
+}
+div#issues_H a, div#issues_H a:hover {
+  display: block;
+  width: 100%;
+  text-align:center;
+  border: 1px solid #900;
+  margin: 10px 0;
+  padding: 0;
+  color: #ff9;
+}
+div#issues_H a:hover {
+  background-color: #900;
+  border: 1px solid #ff9;
+}
+/* 2006_05_07 -- constrain width, but not height -- height is variable */
+/* cover art thumbnail image size */
+div#issues_H img {
+  width: 96px;
+}
+*/
+
+/* THE SEARCH BLOCK */
+div#searchblock {
+  background-color: #ff9;
+  border: 1px solid #900;
+  border-color: #fff #900 #900 #fff;
+}
+div#searchblock table {
+  background-color: #ff9;
+  margin: 5px auto 0;
+  width: 90%;
+}
+span#searchoptions {
+  color: #c00;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* THE FOOTER */
+
+div#footer {
+  background-color: #900;
+}
+div#footer table {
+  width 99%;
+  text-align: center;
+}
+div#footer table td {
+  width 25%
+}
+div#footer p {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14pt;
+}
+div#footer a {
+  color: #fff;
+  text-decoration: none;
+}
+div#footer a:hover {
+  color: #900;
+  background-color: #fff;
+  text-decoration: none;
+}
+/* ==== PAGE-SPECIFIC LAYOUTS ==== */
+
+/* ==== ARCHIVE HOME PAGE ==== */
+
+td#homeContainer {
+  vertical-align: top;
+  background-color: #fff;
+}
+
+div#homeBody {
+  background-color: #fff;
+}
+div#homeBody h1{
+  color: #900;
+  background-color: #fff;
+  text-align: center;
+  margin-top: 0;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #900;
+}
+h4.versionInfo {
+  color: #600;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin: 3px 0 0 0;
+  padding: 0;
+}
+div#homeBody h2 {
+  color: #900;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  padding: 10px 20px;
+}
+div#homeBody h3 {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+div#homeBody h4 {
+  color: #900;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding-left: 20px;
+}
+
+div#homeBody p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  padding-left: 20px;
+  padding-right: 1em;
+}
+
+div#homeBody li {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  padding-left: 20px;
+  padding-right: 1em;
+}
+
+/* HOME PAGE UPPERRIGHT FLOAT DIV */
+div#homeBody dl {
+  margin-left: 10px;
+}
+div#homeBody dt {
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  font-size: 14pt;
+}
+div#homeBody dd {
+  font-family: "Times New Roman", Times, serif;
+  color: #000;
+  font-size: 14pt;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+div#homeBody div.home_latest_issue {
+  width: 214px;
+  float: right;
+  margin: 0 0 3px 3px;
+  border: 1px solid #900;
+  border-width: 0 1px 1px 1px;
+  text-align: center;
+}
+div#homeBody div.home_latest_issue a {
+  display: block;
+  padding: 0 0 2px 0;
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14pt;
+  color: white;
+  background-color: #900;
+  text-decoration: none;
+}
+div#homeBody div.home_latest_issue a:hover,
+div#homeBody div.home_latest_issue a:visited:hover {
+  color: #900;
+  background-color: white;
+  text-decoration: none;
+}
+div#homeBody div.home_latest_issue a:visited {
+  color: white;
+  background-color: #900;
+  text-decoration: none;
+}
+
+
+
+/* ==== THE ALL-COMPOSERS HOME PAGE ==== */
+
+table#composersHomeIndex {
+}
+td#composerHomeIndex {
+  vertical-align: top;
+}
+div#alphabet {
+  background-color: #fff;
+  border-bottom: 1px solid #900;
+}
+div#alphabet h2 {
+  color: #900;
+  margin: 0;
+  padding: 1em 0;
+  text-align: center;
+}
+div#alphabet h3 {
+  color: #900;
+  margin: 0;
+  padding: 0 1em 1em;
+  text-align: center;
+  font-size: 18px;
+}
+div#alphabet h3 a {
+  color: #900;
+  text-decoration: none;
+}
+div#alphabet a:visited {
+  color: purple;
+  text-decoration: none;
+}
+div#alphabet h3 a:hover {
+  background-color: #900;
+  /* color: yellow; */
+  text-decoration: none;
+}
+
+/* 2005_11_28 don't override div.body 
+div#mostReviewed {
+}
+div#mostReviewed h2 {
+  color: #900;
+  background-color: #ff9;
+  margin: 0;
+  padding: 0 1em 0;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 1px solid #99a;
+}
+table#composersAlpha {
+  background-color: #fff;
+}
+#composersAlpha p {
+  margin 0;
+  padding: 3px 5px 0 10px;
+  font-size: 14px;
+}
+#composersAlpha p a {
+  color: #900;
+  text-decoration: none;
+}
+#composersAlpha p a:visited {
+  color: purple;
+  text-decoration: none;
+}
+#composersAlpha p a:hover {
+  background-color: #c00;
+  color: #cc9;
+}
+2005_11_28 end */
+
+/* ==== ALPHABETICAL COMPOSER LIST PAGES ==== */
+
+table#composersAlpha {
+  width: 100%;
+}
+div#ALPHA_HREF {
+  background-color: #fff;
+  border-bottom: 1px solid #900;
+}
+div#ALPHA_HREF h2 {
+  color: #900;
+  margin: 0;
+  padding: 1em 0;
+  text-align: center;
+}
+div#ALPHA_HREF h3 {
+  color: #900;
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+  font-size: 18px;
+}
+div#ALPHA_HREF h3 a {
+  color: #900;
+  text-decoration: none;
+}
+div#ALPHA_HREF h3 a:visited {
+  color: purple;
+  text-decoration: none;
+}
+div#ALPHA_HREF h3 a:hover {
+  background-color: #900;
+  color: yellow;
+  text-decoration: none;
+}
+table#composersHome {
+  background-color: #fff;
+  width: 100%;
+}
+#composersHome p {
+  margin 0;
+  padding: 3px 5px 0 10px;
+  font-size: 14px;
+}
+#composersHome p a {
+  color: #900;
+  text-decoration: none;
+}
+#composersHome p a:visited {
+  color: purple;
+}
+#composersHome p a:hover {
+  background-color: #c00;
+  color: #cc9;
+}
+
+/* ==== COMPOSER WORKS INDEX ==== */
+
+td#composerWorkIndex {
+  vertical-align: top;
+}
+
+div#composer {
+  background-color: #fff;
+  border-bottom: 1px solid #900;
+}
+
+/* The Composer's Name */
+
+div#composer h2 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 1em;
+  text-transform: capitalize;
+  color: #a00;
+}
+
+table#workReviews {
+  width: 100%;
+  background-color: #fff;
+}
+
+table#workReviews td {
+  border-bottom: 1px solid #900;
+}
+
+td.work {
+  width:70%;
+  border-right: 1px solid #900;
+}
+
+td.work p {
+  padding: 0.2em 1em;
+}
+
+/* 2005_11_28 I removed the stupid H3 P nesting 
+table#workReviews td.worktitle h3.worktitle,
+table#workReviews td.work h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 0 0.5em;
+  text-align: left;
+}
+*/
+
+/* this is the left side of the composer-work index entry */
+table#workReviews td.worktitle h3.worktitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14pt;
+  font-weight: normal;
+  padding: 0 0.5em;
+  text-align: left;
+  background-color: #fff;
+  border: 0;
+  color: #900;
+}
+td.reviews {
+  text-align: right;
+}
+
+td.reviews p {
+  margin: 0;
+  padding: 0;
+}
+
+/* This is the review citation at the right of a Composer-Work Index Entry */
+td.reviews p a {
+  color: #a00;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  margin: 0;
+  padding: 0 0.5em 0 0;
+}
+td.reviews p a:visited {
+  color: purple;
+  text-decoration: none;
+}
+td.reviews p a:hover {
+}
+
+/* ==== INDIVIDUAL REVIEW PAGES ====  */
+
+td#review {
+  vertical-align: top;
+}
+
+/* The Preamble, if any */
+/* We'll hide this on the Public Site */
+
+div#TitlesDiv {		/* Titling for this Article */
+  background-color: #cc9;	/* Continuation of leftBar color */
+}
+
+h2.article_category {		/* e.g. Collections: Vocal */
+  text-align: center;
+  margin: 0;
+  padding: 5px 1em;
+  border-bottom: 1px solid #900;
+}
+
+
+div#preambleDiv {
+  background-color: #fff;
+}
+
+p.preamble {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0.1em 1em 0.5em 1em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* The Traditional Headnote */
+
+div#headnoteDiv {
+  background-color: #fff;
+}
+p.headnote {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #900;
+  border-top: 1px solid #900;
+}
+
+/* The Review Body */
+
+/* next one not used anywhere */
+div#reviewBodyDiv {
+  background-color: #fff;
+}
+
+/* 2006_01_09 fix IE5 Mac red background problem */
+div#BodyDiv {
+  background-color: #fff;
+}
+
+p.reviewBody {
+ padding: 1.0em 1em 0.1em 1em;
+  margin: 0.0em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Problematic Headnotes Cause Red Text */
+/* We'll hide this from the public */
+
+div#parseErrorDiv {
+}
+
+p.parseError {
+  color: red;
+  padding: 0.0em 1em 0.1em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+div#runoutDiv {
+}
+
+p.runout {
+  color: #a00;
+  padding: 0.0em 1em 0.1em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+
+/* The Traditional Headnote */
+/* this is all the headnotes */
+div#headnoteDiv {
+  background-color: #fff;
+}
+p.headnote,
+  p.ARTICLE_HEADING,
+  p.ALBUM_TITLE,
+  p.BLANK,
+  p.BOOK_HEADNOTE,
+  p.BYLINE,
+  p.CLIST_HEADNOTE,
+  p.WLIST_HEADNOTE,
+  p.COL2_HEADNOTE,
+  p.COL_HEADNOTE,
+  p.CPR_HEADNOTE,
+  p.BOLLY_HEADNOTE,
+  p.EXTRAS_HEADNOTE,
+  p.FUNNY_COL2_HEADNOTE,
+  p.FUNNY_COL_HEADNOTE,
+  p.FUNNY_CPR_HEADNOTE,
+  p.FUNNY_PROLOG,
+  p.FUNNY_WANT_PROLOG,
+  p.PROLOG,
+  p.SELECTIONS_HEADNOTE {
+  background-color: #ff9;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0.5em 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #fc6;
+  border-top: 1px solid #fc6;
+}
+
+p.CLIST_HEADNOTE,
+  p.COL2_HEADNOTE,
+  p.EXTRAS_HEADNOTE,
+  p.SELECTIONS_HEADNOTE,
+  p.WLIST_HEADNOTE {
+    background-color: #ffc;
+}
+
+p.EXTRAS_HEADNOTE span.extras {
+  color: blue;
+  font-weight: bold;
+}
+
+
+span.ARIAL {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14pt;
+}
+
+span.STET_ARIAL, p.STET_ARIAL {
+  padding: 0.5em 0em 0em 1em;
+  margin: 0.0em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14pt;
+}
+
+/* this is a Composer in a headnote */
+/* 2008_07_13 make composer bigger so I can see it's there */
+span.BLACKb {
+  font-weight: bold;
+  font-size: larger;	
+  color: #044;
+}
+
+span.SUPER { 
+  font-size: xx-small;
+  vertical-align: super;
+  color:red;
+}
+
+span.ARIALb {
+  font-weight: bold;
+  font-size: 14pt;
+}
+
+span.ARIALi {
+  font-style: italic;
+  font-size: 14pt;
+}
+
+span.ARIALbi {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 14pt;
+}
+
+/* The Review Body Paragraphs */
+p.B, p.Br, p.Bf, p.Bx {
+ padding: 0.5em 1em 0.5em 1em;
+  margin: 0.0em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+span.STET_TIMES, p.STET_TIMES {
+  padding: 0.5em 0em 0em 1em;
+  margin: 0.0em;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14pt;
+}
+span.TIMES {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14pt;
+}
+
+span.TIMESi {
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14pt;
+}
+
+span.TIMESb, span.reviewersig {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14pt;
+}
+
+span.TIMESbi {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 14pt;
+}
+
+/* the Alpha Block Table */
+
+table#alphaTable {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  border: 2px solid black;
+  border-color: #900;
+  border-width: 0 2px;
+  text-align: center;
+  margin: 0 auto 10px;
+}
+#alphaTable th {
+  color: #900;
+  margin-bottom: 10px;
+  padding: 5px 0;
+  font-size: 14pt;
+  background-color: #fc6;
+  border-bottom: 2px solid #900;
+}
+
+#alphaTable td {
+  padding-bottom: 2px;
+  background-color: #ff9;
+  width: 25%;
+}
+
+#alphaTable td a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #c00;
+}
+#alphaTable td p.linkLetter {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ff9;
+  font-size: 16pt;
+}
+#alphaTable td p.currentLetter {
+  color: #fc6;
+  background-color: #c00;
+  font-size: 16pt;
+}
+#alphaTable td p.deadLetter {
+  color: #999;
+  font-size: 16pt;
+  background-color: #ff9;
+}
+
+/* The Review Title Block */
+div.titleBlock {
+  background-color: #fff;
+}
+
+/* This says something like Feature Article by Foo Barsoom */
+/* ...or, on the Index pages, says Issues Index. */
+div.titleBlock h2,
+div.body h2.indexcategory,
+div#composer h2,
+div#vocalrole h2,
+div#instrument h2,
+div#homebody h1
+ {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0px;
+/* ccs testing rightbar interaction  padding: 5px 0; */
+  padding: 5px 0;
+  border-bottom: 2px solid #900;
+  font-size: 14pt;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #900;
+  background-color: #cccccc;
+}
+div#homebody h2
+ {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #900;
+  font-size: 16pt;
+}
+
+/* if there is an Article Title, it goes here */
+div.titleBlock h1 {
+  text-align: center;
+  color: #033;
+  background-color: #ffc;
+  border-bottom: 1px solid #900;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+a.titleBlockReviewer {
+  text-decoration: none;
+  font-weight: bold;
+  color: #00c;
+}
+
+/* The Review Date Block */
+
+div.clearRightDiv {
+  clear: right;
+}
+div#dateBlockDiv {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid #900;
+}
+div#dateBlockDiv h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+/* The Review Browser Block */
+
+div#browserBlockDiv {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table#browserTable {
+  width: 100%;
+  border: 2px solid black;
+  border-color: #900;
+  border-width: 2px 2px 2px 0;
+  text-align: center;
+  margin: 0 0 10px;
+}
+#browserTable th {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #900;
+  margin-bottom: 10px;
+  padding: 5px 0;
+  font-size: 16;
+  background-color: #fc6;
+  border-bottom: 2px solid #900;
+}
+
+#browserTable td {
+  border-bottom: 1px solid #c00;
+  padding: 1px;
+}
+
+#browserTable td a {
+  font-size: 14px;
+}
+
+td.firstArticle a, td.prevArticle a, td.nextArticle a, td.lastArticle a  {
+  width: 20px;
+  border: 0;
+  padding: 0;
+}
+
+#browserTable td.avPair {
+  padding: 5px 10px;
+  line-height: 1.0;
+}
+
+#browserTable a.issuesDir {
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  margin: 0;
+  margin: 0.1em auto 0 0px;
+  color: #600;
+}
+
+#browserTable a.articleTypeDir {
+  text-decoration: none;
+  text-transform: all-uppercase;
+  font-weight: bold;
+  color: #090;
+}
+
+#browserTable a.reviewerDir {
+  text-decoration: none;
+  font-weight: bold;
+  color: #00f;
+}
+
+#browserTable a.composerDir {
+  text-decoration: none;
+  font-weight: bold;
+  color: #066;
+}
+
+#browserTable a.labelDir {
+  text-decoration: none;
+  font-weight: bold;
+  color: #f00;
+}
+
+#browserTable a.performerDir {
+  text-decoration: none;
+  font-weight: normal;
+  color: #099;
+}
+
+#browserTable a.voiceDir, #browserTable a.instrumentDir{
+  text-decoration: none;
+  font-weight: normal;
+  color: #009;
+}
+
+#browserTable a.vroleDir {
+  text-decoration: none;
+  font-weight: normal;
+  font-style: italic;
+  color: #f00;
+}
+
+#labelTitles {
+  color: red;
+}
+
+/* #2012_04_18 -- add fatGuy for AUDIO CLIPS */
+div.fat_guy {
+  background-color: #FFF;
+  border: 0;
+  width: 300px;
+  float: right;
+  padding: 0;
+  margin: 0px 0px 0px 10px;
+}
+
+/* AMAZON Buy Divs -- 2006_06_23 */
+/* AMAZON BODY INSERTIONS FROM genPeteArticles */
+div.AZArticleDiv {
+  background-color: #FFF;
+  border: 0;
+  width: 200px;
+  float: right;
+  padding: 0;
+  margin: 0px 0px 0px 10px;
+}
+div.AZArticleDiv img, div.fat_guy img {
+  text-align: center;
+  margin: 0 0 0px 0;
+}
+div.AZArticleDiv img.azbuybutton, div.fat_guy img.azbuybutton  {
+}
+
+div.AZArticleDiv div.azbuytextdiv {
+  text-align: center;
+  width: auto;
+  margin: 10px 0 0 0;
+  border: 1px solid #900;
+}
+
+div.fat_guy div.azbuytextdiv {
+  text-align: center;
+}
+
+div.AZArticleDiv a, div.fat_guy a {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.1;
+  color: #A00;
+  font-weight: normal;
+  font-size: 14px;
+  width: 200px;
+}
+div.fat_guy p {
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  text-decoration: none;
+  line-height: 1.1;
+  font-weight: normal;
+  font-size: medium;
+}
+span.azbuybuttontextlabel {
+  color: green;
+  font-family: Arial, Helvetica, sans-serif;
+}
+span.azbuybuttontextmedium {
+  color: blue;
+  font-variant: small-caps;
+  font-size: 12;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* AMAZON INDEX INSERTIONS FROM genInversions */
+table.azinsertiontable {
+  border: 0;
+}
+table.azinsertiontable td {
+  border: 0;
+}
+table.azinsertiontable td.azinsertiontd {
+  text-align: right;
+  border-bottom: 0;
+}
+table.azinsertiontable a {
+  text-decoration: none;
+}
+table.azinsertiontable td.azinsertiontd a {
+  text-decoration: none;
+}
+
+/* AMAZON INDEX ENTRIES FOR PERFORMER_WORKS INDEX */
+div#performers_works {
+}
+div#performers_works td.work {
+  vertical-align: top;
+}
+div#performers_works td.work p {
+  margin: 0;
+  padding: 2px;
+}
+div#performers_works td.work p span.pwi_reviewer{
+  color: black;
+}
+div#performers_works td.work p span.pwi_composer{
+  color: black;
+}
+div#performers_works td.reviews {
+}
+div#performers_works td.reviews p {
+}
+div#performers_works td.reviews p a {
+  display: inline;
+  text-decoration: underline;
+}
+
+/* AMAZON INDEX ENTRIES FOR DEFAULT INDEX */
+a span.stdi_title {
+  color: black;
+}
+a span.stdi_performer {
+  color: #C00;
+}
+a:visited span.stdi_performer {
+  color: purple;
+}
+
+/* add black bold for Issue in Feature Articles */
+/* pfs 2017_08_12 */
+.blackbold {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+/* AMAZON INDEX ENTRIES FOR LABELs INDEX */
+div#labels_titles {
+}
+div#labels_titles a span.labeli_title {
+  color: black;
+}
+div#labels_titles a span.labeli_performer {
+  color: #C00;
+}
+div#labels_titles a:visited span.labeli_performer {
+  color: purple;
+}
+/* AMAZON INDEX ENTRIES FOR WANT INDEX */
+table td a span.wanti_reviewer {
+  color:red;
+}
+table td a:visited span.wanti_reviewer {
+  color:purple;
+}
+table td a span.wanti_title {
+  color:black;
+}
+/* AMAZON INDEX ENTRIES FOR BOLLY INDEX */
+table td a span.bollyi_work {
+  color:red;
+}
+table td a:visited span.bollyi_work {
+  color:purple;
+}
+table td a span.bollyi_composer {
+  color:black;
+}
+/* AMAZON INDEX ENTRIES FOR BOOK REVIEWS INDEX */
+table#bookreviews-table td {
+  padding: 2px;
+  border-bottom: 1px solid black;
+}
+table td a span.booki_title {
+  color:red;
+}
+table td a:visited span.booki_title {
+  color:purple;
+}
+table td a span.booki_data {
+  color:black;
+}
+/* INDEX ENTRIES FOR JAZZ REVIEWS INDEX */
+div#jazz_H {
+}
+div#jazz_H a span.jazzi_title {
+  color: #C00;
+}
+div#jazz_H a span.jazzi_issue {
+  color: black;
+}
+div#jazz_H a:visited span.jazzi_title {
+  color: purple;
+}
+
+/* for google search box */
+div.gsc-control-cse{
+      width: auto !important;
+      padding: 4px !important;
+    }
+
+    form.gsc-search-box {
+      padding-left: 4px !important;
+      padding-right: 4px !important;
+    }
