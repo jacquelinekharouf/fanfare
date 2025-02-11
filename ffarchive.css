@@ -149,7 +149,6 @@ td#leftNav div.member-area {
   text-align: center;
   font-size: 14px;
 }
-
 .login-cluster a {
   margin: 10px auto;
   color: #066;
@@ -1102,15 +1101,14 @@ span.STET_ARIAL, p.STET_ARIAL {
 }
 
 /* this is a Composer in a headnote */
-/* 2008_07_13 make composer bigger so I can see it's there */
 span.BLACKb {
   font-weight: bold;
-  font-size: larger;	
+  font-size: 16pt;	
   color: #044;
 }
 
 span.SUPER { 
-  font-size: xx-small;
+  font-size: 12pt;
   vertical-align: super;
   color:red;
 }

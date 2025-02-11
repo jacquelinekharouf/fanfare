@@ -1,0 +1,929 @@
+# Page templates for index and article pages
+#
+# this is the SCATLESS version, and goes in ACTIVE/commonFiles/pageTemplates.txt
+#
+# ccs 2018-02-08 massive changes for new buttons and blue color scheme
+# pfs -- 2005_07_30
+# revised 2005_08_18 for leveldot fiasco
+# revised 2006_08_27 to add Google Free Search to bottom of each page
+# 2006_03_03 diverges from regular Fanfare to accomodate Celeste Lunar setup
+# 2006_04_12 revised for paid site structure, and google search removed
+# 2006_05_07 -- reinstated google search div pointing to fanfareArchive.com 
+# 2006_08_23 -- AMAZON buy divs
+# 2006_10_19 -- cancel this!  It doesn't work
+# 2006_09_02 -- Add HEAD meta tag content UTF-8
+# 2006_10_20 -- Buy link abstracted from the Amazon Link Tool
+# 2006_10_27 -- add RENEW SUBSCRIPTION to login-cluster
+# 2006_12_03 -- extend copyright dates
+# 2007_07_30 -- extend copyright dates
+#2008_07_30 -- add google analytics js
+#2008_11_21 -- change titles DVD -> Video
+#2011_01_23 -- extend copyright dates
+#2011_04_30 -- h1 and h2 classes to lc
+#2012_01_28 -- ccs extend copyright dates
+#2012_04_10 -- add SSIPages
+#2012_04_18 -- add fatGuy
+#2012_05_23 -- ccs remove Google search code and button
+#2014_02_20 -- convert SACDs to ADANCED AUDIO
+#2017_07_15 -- change name of Bollywood index
+#2017_08_11 -- change FEATURE Articles to 2-column
+#2022_06_01 -- change to new Google Analytics code in HEAD section
+
+master:
+<html>
+  <head>
+    <title>_title_string_: Fanfare Archive </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="_indexLevelDots_styles/ffarchive.css">
+<script type='text/javascript' src='http://dev.fanfarearchive.com/revive/live/www/delivery/spcjs.php?id=1&amp;block=1&amp;target=_blank&amp;charset=UTF-8'></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E5S0EPBZMR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E5S0EPBZMR');
+</script>
+
+  </head>
+  <body>
+    <div id="container"> <!-- everything goes in here -->
+	    _masthead_
+      <table id="mainContent" cellspacing=0>
+	<tr>
+	  <td id="leftNav">
+	 _leftbar_
+<!--#include virtual="/ssi-pages/leftbar_single.ext" -->
+<!--#include virtual="/ssi-pages/leftbar.ext" -->	  </td>
+	  </td>
+	  <td id="body" width="100%">
+	    _body_
+<p>&nbsp;</p>
+  <!--#include virtual="/ssi-pages/bottombar_single.ext" -->
+# C commenting out sitesearch <div id="sitesearch">
+# C commenting out this titleBlock      <div class="titleBlock">
+# C commenting out sitesearch </div>
+# 2006_03_03 -- commented out google search div
+#<h2>Site Search</h2>
+# 2015_10_02 CCS putting in right side ssi
+# C commenting out this titleBlock </div>
+</div>
+
+# 2006_03_03 -- commented out google search div
+# 2006_05_07 -- reinstated google search div pointing to fanfareArchive.com 
+# THIS IS THE CURRENT SOURCE UNMODIFIED
+#<!-- Search Google -->
+#<center>
+#<FORM method=GET action=http://www.google.com/custom>
+#<TABLE bgcolor=#FFFFFF cellspacing=0 border=0>
+#<tr valign=top><td>
+#<A HREF=http://www.google.com/search>
+#<IMG SRC=http://www.google.com/logos/Logo_25wht.gif border=0 ALT=Google
+#align=middle></A>
+#</td>
+#<td>
+#<INPUT TYPE=text name=q size=31 maxlength=255 value="">
+#<INPUT type=submit name=sa VALUE="Google Search">
+#<INPUT type=hidden name=cof
+#VALUE="S:http://www.fanfarearchive.com;GL:0;AH:center;LH:46;L:http://www.fanfarearchive.com/commonImages/fanfare-search-results.gif;LW:400;AWFID:c9dafde5b43fb0e1;">
+#<input type=hidden name=domains
+#value="www.fanfarearchive.com"><br><input type=radio name=sitesearch
+#value=""> Search WWW <input type=radio name=sitesearch
+#value="www.fanfarearchive.com" checked> Search www.fanfarearchive.com
+#</td></tr></TABLE>
+#</FORM>
+#</center>
+#<!-- Search Google --> 
+# END OF CURRENT SOURCE UNMODIFIED
+
+# <!-- Search Google 
+# <div id="searchblock">
+# <div id="cse" style="width: 100%;">Loading</div>
+# <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+# 
+# <script type="text/javascript"> 
+  # google.load('search', '1', {language : 'en'});
+  # google.setOnLoadCallback(function() {
+    # var customSearchControl = new google.search.CustomSearchControl('015624833353648041370:raqnmeli94u');
+    # customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    # customSearchControl.draw('cse');
+  # }, true);
+# </script>
+# <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
+# </div>
+# <!-- Search Google -->
+
+	  </div>
+<td valign="top" align="right" bgcolor="#006680">
+  <!--#include virtual="/ssi-pages/rightbar_single.ext" -->
+</td>
+#	  </td>
+	</tr>
+      </table> <!-- END OF #mainContent -->
+
+        _footer_
+      <div id="footer"> <!-- the FOOTER -->
+      </div> <!-- END OF #footer -->
+    </div> <!-- END OF #container -->
+  </body>
+</html>
+
+master.masthead:
+  <div id="masthead"> <!-- the MASTHEAD -->
+    <table id="mastheadTable" cellspacing=0>
+    <tr>
+      <td id = "leftMasthead" rowspan="2">
+	<h3 class="ffhome"><a href="/index.html"><img src="_indexLevelDots_commonImages/fanfare-archive.png" alt="Fanfare Magazine Home Page"></a></h3>
+      </td>
+      <td id = "rightMastHead">
+  <h2 class="masterIndexEntryTop">
+# 2006_05_07 -- Google Search Button Restored as before
+# 2018-02-08 CCS adding in new buttons
+<a class="issues" href="_indexLevelDots_indices/itop/issues/index.html"><img src="_indexLevelDots_commonImages/magazine-issues.png" alt="Issues"></a><a class="books" href="_indexLevelDots_indices/itop/bookreviews/index.html"><img src="_indexLevelDots_commonImages/book-reviews.png" alt="Book Reviews"></a><a class="collections" href="_indexLevelDots_indices/itop/collections/index.html"><img src="_indexLevelDots_commonImages/collections.png" alt="Collections"></a><a class="articles" href="_indexLevelDots_indices/itop/articles/index.html"><img src="_indexLevelDots_commonImages/feature-articles.png" alt="Feature Articles"></a><a class="hall" href="_indexLevelDots_indices/itop/hall/index.html"><img src="_indexLevelDots_commonImages/hall-of-fame.png" alt="The Hall of Fame"></a><a class="labels" href="_indexLevelDots_indices/itop/labels/index.html"><img src="_indexLevelDots_commonImages/labels.png" alt="Labels"></a><a class="reviewers" href="_indexLevelDots_indices/itop/reviewers/index.html"><img src="_indexLevelDots_commonImages/reviewers.png" alt="Reviewers"></a><a class="want" href="_indexLevelDots_indices/itop/want/index.html"><img src="_indexLevelDots_commonImages/want-lists.png" alt="The Want Lists"></a>
+  </h2>
+  <h2 class="masterIndexEntryMiddle">
+<a class="composers" href="_indexLevelDots_indices/itop/composers/index.html"><img src="_indexLevelDots_commonImages/composers.png" alt="Composers"></a><a class="conductors" href="_indexLevelDots_indices/itop/conductors/index.html"><img src="_indexLevelDots_commonImages/conductors.png" alt="Conductors"></a><a class="ensembles" href="_indexLevelDots_indices/itop/ensembles/index.html"><img src="_indexLevelDots_commonImages/ensembles-orchestras.png" alt="Ensembles and Orchestras"></a><a class="instrumentalists" href="_indexLevelDots_indices/itop/instrumentalists/index.html"><img src="_indexLevelDots_commonImages/instrumentalists.png" alt="Instrumentalists"></a><a class="performers" href="_indexLevelDots_indices/itop/performers/index.html"><img src="_indexLevelDots_commonImages/performers.png" alt="Performers"></a><a class="singers" href="_indexLevelDots_indices/itop/singers/index.html"><img src="_indexLevelDots_commonImages/singers.png" alt="Singers"></a>
+  </h2></td></tr>
+    <tr>
+    <td id="masthead-bottom-right">
+  <h2 class="masterIndexEntryBottom">
+<a class="instruments" href="_indexLevelDots_indices/itop/instruments/index.html"><img src="_indexLevelDots_commonImages/instruments.png" alt="Instruments"></a><a class="vocalroles" href="_indexLevelDots_indices/itop/vocalroles/index.html"><img src="_indexLevelDots_commonImages/vocal-roles.png" alt="Vocal Roles"></a><a class="voices" href="_indexLevelDots_indices/itop/voices/index.html"><img src="_indexLevelDots_commonImages/voices.png" alt="Voices"></a><a class="sacds" href="_indexLevelDots_indices/itop/sacds/index.html"><img src="_indexLevelDots_commonImages/sacds.png" alt="SACDs"></a><a class="jazz" href="_indexLevelDots_indices/itop/jazz/index.html"><img src="_indexLevelDots_commonImages/jazz.png" alt="Jazz"></a><a class="bollywood" href="_indexLevelDots_indices/itop/bollywood/index.html"><img src="_indexLevelDots_commonImages/bollywood.png" alt="Soundtracks Shows and Pop"></a><a class="video" href="_indexLevelDots_indices/itop/video/index.html"><img src="_indexLevelDots_commonImages/videos.png" alt="Video"></a></h2>
+   </h2></td></tr>
+    </table>
+  </div> <!-- END OF #masthead -->
+
+master.leftbar:
+
+# 2006_03_03 -- add the login and account management links
+home.leftbar:
+  <div class="member-area">
+  <div class="titleBlock">
+    <h2>Subscriber Area</h2>
+  </div>
+
+  <div class="login-cluster">
+  <h2><A HREF="http://www.fanfarearchive.com/amember/login.php">Login to the <i>Fanfare</i> Archive</A></h2>
+  <h2><A HREF="http://www.fanfarearchive.com/amember/member.php">Change Password / Edit Profile</A></h2>
+  <h2><A HREF="http://www.fanfarearchive.com/amember/member.php">Forgot your password?</A></h2>
+  <h2><A HREF="http://www.fanfarearchive.com/amember/logout.php">Logout</A></h2>
+  <h2><A HREF="./help.html">Help/User Agreement</A></h2>
+  <h3>Not a Fanfare subscriber yet?<br> <A HREF="http://www.fanfarearchive.com/amember/signup.php">Subscribe here</A></h3>
+  <h3>Want to renew your existing <i>Fanfare</i> subscription?<br> <A HREF="http://www.fanfarearchive.com/amember/member.php">Renew Your Subscription Here</A></h3>
+  <h2><A HREF="./introduction.html">Introduction to the <i>Fanfare</i> Web Archive</A></h2>
+  </div>
+  </div>
+
+#2015_10_02 -- add SSIPages
+
+master.body:
+  <div class="body" id="default_index">
+  <h2 class = "indexcategory">_index_category_ Index</h2>
+  <p>This index is not ready yet.</p>
+  </div>
+
+master.footer:
+  <div id="footer"> <!-- the FOOTER -->
+  <table class="footer-table">
+  <tr>
+  <td id="foot1"><p><a href="/index.html"><i>FANFARE</i> MAGAZINE HOME</a></p></td>
+# 2007_07_30 -- extend copyright dates
+  <td id="foot2"><p>Copyright &copy; 1977-2025 by <a href="mailto:fanfaremag@aol.com">Fanfare Inc.</a></p></td>
+  <td id="foot3"><p><a href="mailto:support@fanfarearchive.com?subject=Fanfare Archive Home">Comments?</a></p></td>
+  <td id="foot4"><p><a href="#container">TOP OF PAGE</a></p></td>
+  </tr>
+  </table>
+  </div> <!-- END OF #footer -->
+
+# THE ISSUES INDICES
+# home page
+# this is entirely custom with cover-art displays
+issues.body.h:
+  <div class="body" id="issues_H">
+  <h2 class = "indexcategory">Issues Index</h2>
+  <table id="issues-table" cellspacing=0>
+  <tr class="thumbsRow">
+  <td class="thumbsCell6"><a href="./_href_"><img src="../../../coverArt/_thumb_"></br>_label_</a></td>
+  </tr>
+
+  </table>
+  </div>
+
+# issues home page leftbar art
+issues.leftart.h:
+  <div class="leftCoverArt">
+  <img src="../../../coverArt/_latest_cover_">
+  </div>
+
+
+# second-level index page
+issues.body.h2:
+  <div class="body" id="issues_H2">
+  <h2 class = "indexcategory">_bucketname_</h2>
+  <table id="issues-table" cellspacing=0>
+  _repeatedTR_1_ columns=2; display=bucketcontents 
+  <tr class="cols2"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td></tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+# issues second-level page leftbar art
+issues.leftart.h2:
+  <div class="leftCoverArt">
+  <img src="../../../coverArt/_apt_cover_">
+  </div>
+
+# first-level index page
+issues.body.h1:
+  <div class="body" id="issues_H1">
+  <h2 class = "indexcategory">_bucketname_</h2>
+  <table id="issues-table" cellspacing=0>
+  _repeatedTR_1_ columns=2; display=bucketcontents 
+  <tr class="cols2"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td></tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+# issues first-level page leftbar art
+issues.leftart.h1:
+  <div class="leftCoverArt">
+  <img src="../../../coverArt/_apt_cover_">
+  </div>
+
+
+# THE ARTICLES INDICES
+# home page
+articles.body.h:
+  <div class="body" id="articles_H">
+  <h2 class = "indexcategory">Feature Articles Index</h2>
+  <table id="articles-table" cellspacing=0>
+  _repeatedTR_1_ columns=2; display=bucketlist 
+  <tr class="cols4">
+  <td class="col1"><p>_COL1_</p></td>
+  <td class="col2"><p>_COL2_</p></td>
+  </tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+# first-level index page
+articles.body.h1:
+  <div class="body" id="articles_H1">
+  <h2 class = "indexcategory">_index_category_: _bucketname_</h2>
+  #<h3>All the Feature Articles in _bucketname_.</h3>
+  <table id="articles-table" cellspacing=0>
+  _repeatedTR_1_ columns=2; display=bucketcontents 
+  <tr class="cols2"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td></tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+# THE COMPOSERS INDICES
+# home page
+composers.body.h:
+  <div class="body" id="composers_H">
+  <div id="titleBlock">
+    <h2 class="indexcategory">Composers and Works Index</h2>
+  </div>
+  <div id="mostReviewed">
+    <h2>Most Reviewed Composers</h2>
+  </div>
+  <table id="composersAlpha" cellspacing=0>
+    <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+  </table>
+  </div>
+
+# the composers by alphabet pages
+composers.body.h2:
+  <div class="body" id="composers_alpha">
+
+    <div class="titleBlock">
+      <h2>Composers: _LETTER_</h2>
+    </div>
+    <table id="composersHome" cellspacing=0>
+      <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+    </table>
+  </div>
+
+# the composers works pages
+composers.body.h1:
+  <div class="body" id="composers_works">
+    <div id="composer">
+      <h2>Works by Composer _COMPOSER_</h2>
+    </div>
+    <table id="workReviews" cellspacing=0>
+      <tr class="entry"><td class="worktitle"><h3 class="worktitle">_WORK_</h3></td><td class="reviews">_REVIEWS_</td></tr>
+    </table>
+  </div>
+
+# THE COLLECTIONS INDICES
+# home page
+collections.body.h:
+  <div class="body" id="collections_H">
+  <h2 class = "indexcategory">Collections Index</h2>
+  <table id="collections-table" cellspacing=0>
+  _repeatedTR_1_ columns=2; display=bucketlist 
+  <tr class="cols2">
+  <td class="col1"><p>_COL1_</p></td>
+  <td class="col2"><p>_COL2_</p></td>
+  </tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+# first-level index page
+collections.body.h1:
+  <div class="body" id="collections_H1">
+  <h2 class = "indexcategory">_bucketname_</h2>
+  <table id="collections-table" cellspacing=0>
+  _repeatedTR_1_ columns=2; display=bucketcontents 
+  <tr class="cols2"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td></tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+
+# THE BOLLYWOOD INDICES
+# home page
+#2017_07_15 -- change name of Bollywood index
+bollywood.body.h:
+  <div class="body" id="bollywood_H">
+  <h2 class = "indexcategory">Soundtracks, Shows, and Pop Index</h2>
+  <table id="bollywood-table" cellspacing=0>
+  _repeatedTR_1_ columns=2; display=bucketlist 
+  <tr class="cols2">
+  <td class="col1"><p>_COL1_</p></td>
+  <td class="col2"><p>_COL2_</p></td>
+  </tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+# THE JAZZ INDICES
+# home page
+jazz.body.h:
+  <div class="body" id="jazz_H">
+  <h2 class = "indexcategory">Jazz Index</h2>
+  <table id="jazz-table" cellspacing=0>
+  _repeatedTR_1_ columns=2; display=bucketlist 
+  <tr class="cols2">
+  <td class="col1"><p>_COL1_</p></td>
+  <td class="col2"><p>_COL2_</p></td>
+  </tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+#2014_02_20 -- convert SACDs to ADANCED AUDIO
+# THE ADVANCED AUDIO INDICES
+# home page
+sacds.body.h:
+  <div class="body" id="sacds_H">
+  <h2 class = "indexcategory">Advanced Audio Index</h2>
+  <table id="sacds-table" cellspacing=0>
+  _repeatedTR_1_ columns=2; display=bucketlist 
+  <tr class="cols2">
+  <td class="col1"><p>_COL1_</p></td>
+  <td class="col2"><p>_COL2_</p></td>
+  </tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+# THE DVDs INDICES
+#2008_11_21 -- change titles DVD -> Video
+# 
+# home page
+video.body.h:
+  <div class="body" id="video_H">
+  <h2 class = "indexcategory">Video Index</h2>
+  <table id="video-table" cellspacing=0>
+  _repeatedTR_1_ columns=2; display=bucketlist 
+  <tr class="cols2">
+  <td class="col1"><p>_COL1_</p></td>
+  <td class="col2"><p>_COL2_</p></td>
+  </tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+# THE BOOK REVIEW INDICES
+# home page
+bookreviews.body.h:
+  <div class="body" id="bookreviews_H">
+  <h2 class = "indexcategory">Book Reviews Index</h2>
+  <table id="bookreviews-table" cellspacing=0>
+#  _repeatedTR_1_ columns=2; display=bucketlist 
+#  <tr class="cols2">
+#  <td class="col1"><p>_COL1_</p></td>
+#  <td class="col2"><p>_COL2_</p></td>
+  _repeatedTR_1_ columns=1; display=bucketlist 
+  <tr class="cols1">
+  <td class="col1"><p>_COL1_</p></td>
+  </tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+# THE WANT LIST INDICES
+# home page
+want.body.h:
+  <div class="body" id="want_H">
+  <h2 class = "indexcategory">Want List Index</h2>
+  <table id="want-table" cellspacing=0>
+  _repeatedTR_1_ columns=2; display=bucketlist 
+  <tr class="cols2">
+  <td class="col1"><p>_COL1_</p></td>
+  <td class="col2"><p>_COL2_</p></td>
+  </tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+# THE HALL OF FAME INDICES
+# home page
+hall.body.h:
+  <div class="body" id="hall_H">
+  <h2 class = "indexcategory">Hall of Fame Index</h2>
+  <table id="hall-table" cellspacing=0>
+  _repeatedTR_1_ columns=2; display=bucketlist 
+  <tr class="cols2">
+  <td class="col1"><p>_COL1_</p></td>
+  <td class="col2"><p>_COL2_</p></td>
+  </tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+# THE REVIEWERS INDICES
+# home page
+reviewers.body.h:
+  <div class="body" id="reviewers_H">
+  <h2 class = "indexcategory">Reviewers Index</h2>
+  <table id="reviewers-table" cellspacing=0>
+  _repeatedTR_1_ columns=4; display=bucketlist 
+  <tr class="cols4">
+  <td class="col1"><p>_COL1_</p></td>
+  <td class="col2"><p>_COL2_</p></td>
+  <td class="col3"><p>_COL3_</p></td>
+  <td class="col4"><p>_COL4_</p></td>
+  </tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+# first-level index page
+reviewers.body.h1:
+  <div class="body" id="reviewers_H1">
+  <h2 class = "indexcategory">Articles by Fanfare Contributor _bucketname_</h2>
+  <table id="reviewers-table" cellspacing=0>
+  _repeatedTR_1_ columns=2; display=bucketcontents 
+  <tr class="cols2"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td></tr>
+  _endrepeatedTR_1_
+
+  </table>
+
+# THE PERFORMERS INDICES
+# home page
+performers.body.h:
+  <div class="body" id="performers_H">
+  <div id="titleBlock">
+    <h2 class="indexcategory">Performers Index</h2>
+  </div>
+  <div id="mostReviewed">
+    <h2>Most Reviewed Performers</h2>
+  </div>
+  <table id="composersAlpha" cellspacing=0>
+    <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+  </table>
+  </div>
+
+# the performer by alphabet pages
+performers.body.h2:
+  <div class="body" id="performers_alpha">
+
+    <div class="titleBlock">
+      <h2>Performers: _LETTER_</h2>
+    </div>
+    <table id="performersHome" cellspacing=0>
+      <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+    </table>
+  </div>
+
+
+# the performers works pages
+performers.body.h1:
+  <div class="body" id="performers_works">
+    <div class="titleBlock">
+      <h2>Performer: _PERFORMER_</h2>
+    </div>
+    <table id="workReviews" cellspacing=0>
+      <tr class="entry"><td class="work">_WORK_</td><td class="reviews">_REVIEWS_</td></tr>
+    </table>
+  </div>
+
+# THE INSTRUMENTALISTS Instrumentalists instrumentalists INDICES
+# home page
+instrumentalists.body.h:
+  <div class="body" id="instrumentalists_H">
+  <div id="titleBlock">
+    <h2 class="indexcategory">Instrumentalists Index</h2>
+  </div>
+  <div id="mostReviewed">
+    <h2>Most Reviewed Instrumentalists</h2>
+  </div>
+  <table id="composersAlpha" cellspacing=0>
+    <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+  </table>
+  </div>
+
+# the instrumentalist by alphabet pages
+instrumentalists.body.h2:
+  <div class="body" id="instrumentalists_alpha">
+
+    <div class="titleBlock">
+      <h2>Instrumentalists: _LETTER_</h2>
+    </div>
+    <table id="instrumentalistsHome" cellspacing=0>
+      <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+    </table>
+  </div>
+
+
+# the instrumentalists works pages
+instrumentalists.body.h1:
+  <div class="body" id="instrumentalists_works">
+    <div id="instrumentalist">
+      <h2>_INSTRUMENTALIST_</h2>
+    </div>
+    <table id="workReviews" cellspacing=0>
+      <tr class="entry"><td class="work"><h3>_WORK_</h3></td><td class="reviews">_REVIEWS_</td></tr>
+    </table>
+  </div>
+# END OF THE instrumentalist Instrumentalist INSTRUMENTALIST INDICES (43 up)
+
+# THE INSTRUMENTS Instruments instruments INDICES
+# home page
+instruments.body.h:
+  <div class="body" id="instruments_H">
+  <div id="titleBlock">
+    <h2 class="indexcategory">Instruments Index</h2>
+  </div>
+  <div id="mostReviewed">
+    <h2>Most Reviewed Instruments</h2>
+  </div>
+  <table id="composersAlpha" cellspacing=0>
+    <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+  </table>
+  </div>
+
+# the instrument by alphabet pages
+instruments.body.h2:
+  <div class="body" id="instruments_alpha">
+
+    <div class="titleBlock">
+      <h2>Instruments: _LETTER_</h2>
+    </div>
+    <table id="instrumentsHome" cellspacing=0>
+      <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+    </table>
+  </div>
+
+
+# the instruments works pages
+instruments.body.h1:
+  <div class="body" id="instruments_works">
+    <div id="instrument">
+      <h2>_INSTRUMENT_</h2>
+    </div>
+    <table id="instrumentPerformers" cellspacing=0>
+      <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+    </table>
+  </div>
+# END OF THE instrument Instrument INSTRUMENT INDICES (43 up)
+
+# THE VOICES Voices voices INDICES
+# home page
+voices.body.h:
+  <div class="body" id="voices_H">
+  <div id="titleBlock">
+    <h2 class="indexcategory">Voices Index</h2>
+  </div>
+  <div id="mostReviewed">
+    <h2>Most Reviewed Voices</h2>
+  </div>
+  <table id="composersAlpha" cellspacing=0>
+    <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+  </table>
+  </div>
+
+# the voice by alphabet pages
+voices.body.h2:
+  <div class="body" id="voices_alpha">
+
+    <div class="titleBlock">
+      <h2>Voices: _LETTER_</h2>
+    </div>
+    <table id="voicesHome" cellspacing=0>
+      <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+    </table>
+  </div>
+
+
+# the voices works pages
+voices.body.h1:
+  <div class="body" id="voices_works">
+    <div id="voice">
+      <h2>_VOICE_</h2>
+    </div>
+    <table id="voicePerformers" cellspacing=0>
+      <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+    </table>
+  </div>
+# THE VOICES Voices voices INDICES 43 up
+
+# THE VOCAL ROLES Vocal Roles vocalroles INDICES
+# home page
+vocalroles.body.h:
+  <div class="body" id="vocalroles_H">
+  <div id="titleBlock">
+    <h2 class="indexcategory">Vocal Roles Index</h2>
+  </div>
+  <div id="mostReviewed">
+    <h2>Most Reviewed Vocal Roles</h2>
+  </div>
+  <table id="composersAlpha" cellspacing=0>
+    <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+  </table>
+  </div>
+
+# the vocalrole by alphabet pages
+vocalroles.body.h2:
+  <div class="body" id="vocalroles_alpha">
+
+    <div class="titleBlock">
+      <h2>Vocal Roles: _LETTER_</h2>
+    </div>
+    <table id="vocalrolesHome" cellspacing=0>
+      <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+    </table>
+  </div>
+
+
+# the vocalroles works pages
+vocalroles.body.h1:
+  <div class="body" id="vocalroles_works">
+    <div id="vocalrole">
+      <h2>_VOCAL_ROLE_</h2>
+    </div>
+    <table id="vocalrolePerformers" cellspacing=0>
+      <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+    </table>
+  </div>
+# THE VOCAL ROLES Vocal Roles vocalroles INDICES 43 up
+
+# THE SINGERS Singers singers INDICES
+# home page
+singers.body.h:
+  <div class="body" id="singers_H">
+  <div id="titleBlock">
+    <h2 class="indexcategory">Singers Index</h2>
+  </div>
+  <div id="mostReviewed">
+    <h2>Most Reviewed Singers</h2>
+  </div>
+  <table id="composersAlpha" cellspacing=0>
+    <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+  </table>
+  </div>
+
+# the singer by alphabet pages
+singers.body.h2:
+  <div class="body" id="singers_alpha">
+
+    <div class="titleBlock">
+      <h2>Singers: _LETTER_</h2>
+    </div>
+    <table id="singersHome" cellspacing=0>
+      <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+    </table>
+  </div>
+
+
+# the singers works pages
+singers.body.h1:
+  <div class="body" id="singers_works">
+    <div id="singer">
+      <h2>_SINGER_</h2>
+    </div>
+    <table id="workReviews" cellspacing=0>
+      <tr class="entry"><td class="work"><h3>_WORK_</h3></td><td class="reviews">_REVIEWS_</td></tr>
+    </table>
+  </div>
+# END OF THE singer Singer SINGER INDICES (43 up)
+
+# THE CONDUCTORS Conductors conductors INDICES
+# home page
+conductors.body.h:
+  <div class="body" id="conductors_H">
+  <div id="titleBlock">
+    <h2 class="indexcategory">Conductors Index</h2>
+  </div>
+  <div id="mostReviewed">
+    <h2>Most Reviewed Conductors</h2>
+  </div>
+  <table id="composersAlpha" cellspacing=0>
+    <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+  </table>
+  </div>
+
+# the conductor by alphabet pages
+conductors.body.h2:
+  <div class="body" id="conductors_alpha">
+
+    <div class="titleBlock">
+      <h2>Conductors: _LETTER_</h2>
+    </div>
+    <table id="conductorsHome" cellspacing=0>
+      <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+    </table>
+  </div>
+
+
+# the conductors works pages
+conductors.body.h1:
+  <div class="body" id="conductors_works">
+    <div id="conductor">
+      <h2>_CONDUCTOR_</h2>
+    </div>
+    <table id="workReviews" cellspacing=0>
+      <tr class="entry"><td class="work"><h3>_WORK_</h3></td><td class="reviews">_REVIEWS_</td></tr>
+    </table>
+  </div>
+# END OF THE conductor Conductor CONDUCTOR INDICES (43 up)
+
+# THE ENSEMBLES Ensembles ensembles INDICES
+# home page
+ensembles.body.h:
+  <div class="body" id="ensembles_H">
+  <div id="titleBlock">
+    <h2 class="indexcategory">Ensembles and Orchestras Index</h2>
+  </div>
+  <div id="mostReviewed">
+    <h2>Most Reviewed Ensembles and Orchestras</h2>
+  </div>
+  <table id="composersAlpha" cellspacing=0>
+    <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+  </table>
+  </div>
+
+# the ensemble by alphabet pages
+ensembles.body.h2:
+  <div class="body" id="ensembles_alpha">
+
+    <div class="titleBlock">
+      <h2>Ensembles: _LETTER_</h2>
+    </div>
+    <table id="ensemblesHome" cellspacing=0>
+      <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+    </table>
+  </div>
+
+
+# the ensembles works pages
+ensembles.body.h1:
+  <div class="body" id="ensembles_works">
+    <div id="ensemble">
+      <h2>_ENSEMBLE_</h2>
+    </div>
+    <table id="workReviews" cellspacing=0>
+      <tr class="entry"><td class="work"><h3>_WORK_</h3></td><td class="reviews">_REVIEWS_</td></tr>
+    </table>
+  </div>
+# END OF THE ensemble Ensemble ENSEMBLE INDICES (43 up)
+
+# THE LABELS Labels labels INDICES
+# home page
+labels.body.h:
+  <div class="body" id="labels_H">
+  <div class="titleBlock">
+    <h2 class="indexcategory">Labels Index</h2>
+  </div>
+  <div id="mostReviewed">
+    <h2>Most Reviewed Labels</h2>
+  </div>
+  <table id="composersAlpha" cellspacing=0>
+    <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+  </table>
+  </div>
+
+# the label by alphabet pages
+labels.body.h2:
+  <div class="body" id="labels_alpha">
+
+    <div class="titleBlock">
+      <h2>Labels: _LETTER_</h2>
+    </div>
+    <table id="labelsHome" cellspacing=0>
+      <tr class="cols3"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td></tr>
+    </table>
+  </div>
+
+
+# the labels works pages
+labels.body.h1:
+  <div class="body" id="labels_titles">
+    <div class="titleBlock">
+      <h2>Label: _LABEL_</h2>
+    </div>
+    <table id="labelTitles" cellspacing=0>
+      <tr class="entry"><td class="entryTitle"><h3>_TITLE_</h3></td></tr>
+    </table>
+  </div>
+# END OF THE label Label LABEL INDICES (43 up)
+
+# THE DOCUMENTS INDICES
+# home page
+documents.body.h:
+  <div class="body" id="documents_H">
+  <h2 class = "indexcategory">_index_category_ Index</h2>
+  <h4>All the documents on this site, arranged by Document Serial Number, which is the Issue followed by the Line of the entry of the Review Table governing the issue in which the article was actually printed.  E.g., 285100 represents the 100th entry in the Final Review Table for issue 28:5.<br>This index is for quality control purposes.  It will not be presented on the public site.</h4>
+  <table id="documents-table" cellspacing=0>
+  _repeatedTR_1_ columns=4; display=bucketlist 
+  <tr class="cols4"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td><td class="col3"><p>_COL3_</p></td><td class="col4"><p>_COL4_</p></td></tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+# first-level index page
+documents.body.h1:
+  <div class="body" id="documents_H1">
+  <h2 class = "indexcategory">_index_category_: _bucketname_</h2>
+  <h4>All the documents on this site, arranged numerically by Document Serial Number and the source file name.<br>This index is for quality control purposes.  It will not be presented on the public site.</h4>
+  <table id="documents-table" cellspacing=0>
+  _repeatedTR_1_ columns=2; display=bucketcontents 
+  <tr class="cols2"><td class="col1"><p>_COL1_</p></td><td class="col2"><p>_COL2_</p></td></tr>
+  _endrepeatedTR_1_
+
+  </table>
+  </div>
+
+# TERMINAL ARTICLES
+
+article.body:
+  <div id="article">
+    <div id="TitlesDiv">
+      _TITLES_
+    </div>
+    <div id="BodyDiv">
+      _BODY_
+      <div class="clearRightDiv"></div>
+    </div>
+  </div>
+  <div id="dateBlockDiv">
+    <h4>This article originally appeared in Issue _ISSUE_STRING_ of <i>Fanfare</i> Magazine.</h4>
+
+  </div>
+  <div id="browserBlockDiv">
+    _BROWSERBLOCK_
+  </div>
+
+# fat_guy for AUDIO CLIPS
+amazon.fat_guy:
+  <div class="fat_guy">
+    <h3>_VIDEO_TRACKS_</h3>
+  </div>
+
+# 2006_08_23 -- AMAZON buy blocks
+amazon.articlediv:
+  <div class="AZArticleDiv">
+    <h3>_AMAZON_ARTICLE_IMAGES_</h3>
+  </div>
+
+amazon.headnotelinks:
+  <span class="AZHeadnoteLink">_AMAZON_HEADNOTE_LINKS_</span>
+
+# 2006_09_05 -- this should be the ONLY place where this link is maintained!
+
+#amazon.buy.link:
+#  http://www.amazon.com/exec/obidos/ASIN/_ASIN_/ref=nosim/fanfaremaaolc-20
+
+# 2006_10_20 -- Buy link abstracted from the Amazon Link Tool
+amazon.buy.link:
+  http://www.amazon.com/gp/product/_ASIN_?ie=UTF8&tag=fanfaremaaolc-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=_ASIN_
+
